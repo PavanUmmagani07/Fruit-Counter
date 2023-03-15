@@ -5,9 +5,11 @@ class FruitsCounter extends Component {
   state = {count: 0}
 
   onIncrement = () => {
-    this.setState(prevState => {
-      return {count: prevState.count + 1}
-    })
+    this.setState(prevState => ({count: prevState.count + 1}))
+  }
+
+  onIncrease = () => {
+    this.setState(prevState => ({count: prevState.count + 1}))
   }
 
   render() {
@@ -35,7 +37,7 @@ class FruitsCounter extends Component {
             <button className="button" type="button" onClick={this.onIncrement}>
               Eat Mango
             </button>
-            <button className="button" type="button" onClick={this.onIncrement}>
+            <button className="button" type="button" onClick={this.onIncrease}>
               Eat Banana
             </button>
           </div>
